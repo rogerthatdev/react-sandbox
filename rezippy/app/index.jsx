@@ -1,4 +1,5 @@
-import { useState } from "react";
+import LikeButton from "./like-button";
+
 // React components should be capitalized to distinguish them from plain HTML and JavaScript
 function Header({ title, subtitle }) {
   return (
@@ -9,15 +10,8 @@ function Header({ title, subtitle }) {
   );
 }
 
-function HomePage() {
+export default function HomePage() {
   const names = ["Ada Lovelace", "Grace Hopper", "Marie Curie"];
-
-  const [likes, setLikes] = useState(0);
-
-  function handleClick() {
-    // Functional state updater
-    setLikes((prevLikes) => prevLikes + 1);
-  }
 
   return (
     <div>
@@ -27,9 +21,7 @@ function HomePage() {
           <li key={`${name}_${index}`}> {name}</li>
         ))}
       </ul>
-      <button onClick={handleClick}>Like - {likes}</button>
+      <LikeButton />
     </div>
   );
 }
-
-root.render(<HomePage />);

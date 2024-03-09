@@ -1,0 +1,47 @@
+<html>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+        const app = document.getElementById('app');
+
+        function Header({ title, subtitle }) {
+            return (
+                <div>
+                <h1>{`Cool ${title}`}</h1>
+                <h2>{subtitle}</h2>
+                </div>
+                );
+        }
+
+        function HomePage() {
+            const names = ['Ada Lovelace', 'Grace Hopper', 'Marie Curie'];
+
+            const [likes, setLikes, ] = React.useState(0);
+
+            function handleClick() {
+                setLikes(likes + 1);
+                console.log(setLikes)
+            }
+
+            return (
+                <div>
+                    <Header title="Develop. Preview. Ship." subtitle="a subtitle" />
+                    <ul> 
+                        {names.map((name, index) => (
+
+                            <li key={`${name}_${index}`}> {name}</li>
+                        ))}
+                    </ul>
+                    <button onClick={handleClick}>Like - {likes}</button>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(app);
+        root.render(<HomePage />);
+    </script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+// React components should be capitalized to distinguish them from plain HTML and JavaScript
 function Header({ title, subtitle }) {
   return (
     <div>
@@ -15,6 +15,7 @@ function HomePage() {
   const [likes, setLikes] = useState(0);
 
   function handleClick() {
+    // Functional state updater
     setLikes((prevLikes) => prevLikes + 1);
   }
 

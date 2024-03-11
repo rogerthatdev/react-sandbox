@@ -14,3 +14,12 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 * `/app/ui`: UI components of the app, such as cards, tables, and forms
 * `/public`: all static assets, such as images
 * `/scripts`: Seeding script for populating database
+
+
+### Styling
+
+* You can use Tailwind for styling using `className` or CSS modules to scope
+styles to a componenent. 
+
+* Use `clsx` library for conditional styling based on state or some other
+  condition. 

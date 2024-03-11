@@ -31,3 +31,12 @@ styles to a componenent.
   ```
     <body className={`${inter.className} antialiased`} >{children}</body>
   ```
+
+### Images
+
+* Add images importing `Image` the `next/image` 
+* Use TailWind to show an image based on screen size:
+  ```
+  // hide by default, show as block in screens medium and up
+  className="hidden md:block"
+  ```

@@ -23,3 +23,11 @@ styles to a componenent.
 
 * Use `clsx` library for conditional styling based on state or some other
   condition. 
+
+### Fonts
+
+* Add a custom font by importing from `/next/font/google`
+* Use that font by referencing it in a `className` parameter:
+  ```
+    <body className={`${inter.className} antialiased`} >{children}</body>
+  ```

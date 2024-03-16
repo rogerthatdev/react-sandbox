@@ -33,7 +33,7 @@ styles to a componenent.
   ```
 
 ### Images
-ss
+
 * Add images importing `Image` the `next/image` 
 * Use TailWind to show an image based on screen size:
   ```
@@ -44,3 +44,7 @@ ss
 ### Navigating between pages
 
 * Instead of `<a>`, Next.js uses `<Link />` to do client-side navigation.
+* To get the user's current path from the URL, use `usePathname()` to check the 
+  path.  This is a hook, therefore, you must include `"use client"` directive at
+  the top of the file that it's imported.  
+

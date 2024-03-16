@@ -33,10 +33,14 @@ styles to a componenent.
   ```
 
 ### Images
-
+ss
 * Add images importing `Image` the `next/image` 
 * Use TailWind to show an image based on screen size:
   ```
   // hide by default, show as block in screens medium and up
   className="hidden md:block"
   ```
+
+### Navigating between pages
+
+* Instead of `<a>`, Next.js uses `<Link />` to do client-side navigation.

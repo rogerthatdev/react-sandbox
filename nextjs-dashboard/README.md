@@ -40,3 +40,11 @@ styles to a componenent.
   // hide by default, show as block in screens medium and up
   className="hidden md:block"
   ```
+
+### Navigating between pages
+
+* Instead of `<a>`, Next.js uses `<Link />` to do client-side navigation.
+* To get the user's current path from the URL, use `usePathname()` to check the 
+  path.  This is a hook, therefore, you must include `"use client"` directive at
+  the top of the file that it's imported.  
+

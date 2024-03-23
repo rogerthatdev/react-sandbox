@@ -58,4 +58,6 @@ styles to a componenent.
     stay on the server and only send results to the client
   * Since they execute on the server, you can query the database directly w/out
     extra API layer
-
+  * In JavaScript, use `await Promise.all([promise1, promise2, etc])` or 
+    `await Promise.allSettled([promise1, promise2, etc])` to initiate each
+    promise in parallel.

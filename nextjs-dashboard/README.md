@@ -82,3 +82,7 @@ styles to a componenent.
 * Two ways to implement streaming with Next.js:
   1. at the page level with the `loading.tsx` file
   1. for specific components with `<Suspense>`
+* `loading.tsx` is a special file built on top of `Suspense` - it allows you to
+  create a fallback UI to show as a replacement while a page loads. 
+  * Static components such as `<SideNav>` are shown immediately. User can
+  interact with it while dynamic content is loading

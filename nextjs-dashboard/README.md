@@ -61,3 +61,15 @@ styles to a componenent.
   * In JavaScript, use `await Promise.all([promise1, promise2, etc])` or 
     `await Promise.allSettled([promise1, promise2, etc])` to initiate each
     promise in parallel.
+
+### Static and dynamic rendering
+
+* 2 limitations: 
+  * data requests can create unintentional waterfall
+  * dashboard is static, so any data updates will not be reflected in application
+* Static rendering: data fetching and rendering happens on the **server** at
+  build time (when you deploy) or during revalidation.
+* Static rendering is useful for UI with no data or data that is shared across
+  users, such as static blog post or a product page. 
+* Dynamic rendering, content is rendered on the server for each user at request
+  time.

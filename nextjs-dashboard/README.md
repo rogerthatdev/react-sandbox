@@ -73,3 +73,12 @@ styles to a componenent.
   users, such as static blog post or a product page. 
 * Dynamic rendering, content is rendered on the server for each user at request
   time.
+
+### Streaming
+
+* Streaming is a data transfer technique that allows you to break down a route
+  into smaller "chunks" and progressively stream them from the server to  the
+  client as they become ready.
+* Two ways to implement streaming with Next.js:
+  1. at the page level with the `loading.tsx` file
+  1. for specific components with `<Suspense>`

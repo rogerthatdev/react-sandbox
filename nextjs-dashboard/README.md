@@ -86,3 +86,7 @@ styles to a componenent.
   create a fallback UI to show as a replacement while a page loads. 
   * Static components such as `<SideNav>` are shown immediately. User can
   interact with it while dynamic content is loading
+  * Route groups allow you to organize files into logical groups without
+    affecting the URL path structure.
+    * When you create a new folder using `()` the name won't be included in the
+      URL path: `/dashboard/(overview)/page.tsx` becomes `/dashboard`

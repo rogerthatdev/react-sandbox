@@ -73,3 +73,20 @@ styles to a componenent.
   users, such as static blog post or a product page. 
 * Dynamic rendering, content is rendered on the server for each user at request
   time.
+
+### Streaming
+
+* Streaming is a data transfer technique that allows you to break down a route
+  into smaller "chunks" and progressively stream them from the server to  the
+  client as they become ready.
+* Two ways to implement streaming with Next.js:
+  1. at the page level with the `loading.tsx` file
+  1. for specific components with `<Suspense>`
+* `loading.tsx` is a special file built on top of `Suspense` - it allows you to
+  create a fallback UI to show as a replacement while a page loads. 
+  * Static components such as `<SideNav>` are shown immediately. User can
+  interact with it while dynamic content is loading
+  * Route groups allow you to organize files into logical groups without
+    affecting the URL path structure.
+    * When you create a new folder using `()` the name won't be included in the
+      URL path: `/dashboard/(overview)/page.tsx` becomes `/dashboard`
